@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@pixi/app": "^7.3.2",
+    "@pixi/app": "^6.5.9",
     "@testing-library/dom": "^9.3.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.1.2",
@@ -21,7 +21,7 @@
     "framer-motion": "^10.16.16",
     "nodemailer": "^6.9.7",
     "pixi-live2d-display": "^0.4.0",
-    "pixi.js": "^7.3.2",
+    "pixi.js": "^6.5.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.1",
