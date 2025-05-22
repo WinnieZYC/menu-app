@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#ff7eb9" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="少女Elenaの菜单 - 精选美食，分享幸福"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -24,10 +24,36 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>少女Elenaの菜单</title>
+    
+    <!-- 引用看板娘交互所需的样式表 -->
+    <link href="%PUBLIC_URL%/static/css/pio.css" rel="stylesheet" type="text/css"/>
+    
+    <!-- Live2D所需的polyfill，解决某些浏览器兼容性问题 -->
+    <script>
+      // Polyfill for older browsers
+      if (!window.Promise) {
+        window.Promise = Promise;
+      }
+      
+      if (!Object.assign) {
+        Object.assign = function() {
+          var target = arguments[0];
+          for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i];
+            for (var key in source) {
+              if (Object.prototype.hasOwnProperty.call(source, key)) {
+                target[key] = source[key];
+              }
+            }
+          }
+          return target;
+        };
+      }
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>您需要启用JavaScript来运行本应用</noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -39,5 +65,10 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    
+    <!-- 引用 Live2D 核心组件 -->
+    <script src="%PUBLIC_URL%/static/js/l2d.js"></script>
+    <!-- 引用看板娘交互组件 -->
+    <script src="%PUBLIC_URL%/static/js/pio.js"></script>
   </body>
 </html>
