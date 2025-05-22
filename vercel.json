@@ -2,6 +2,7 @@
   "version": 2,
   "framework": "create-react-app",
   "installCommand": "npm install --legacy-peer-deps",
+  "buildCommand": "CI=false npm run build",
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "handle": "filesystem" },
