@@ -154,7 +154,7 @@ const Input = styled.input`
 export const CartPage: React.FC = () => {
   const { cart, getTotalPrice, clearCart } = useCart();
   const [phoneNumber, setPhoneNumber] = useState('9175201314');
-  const [email, setEmail] = useState('elena@love.com');
+  const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
   
@@ -250,7 +250,7 @@ export const CartPage: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
-  }, [cart, getTotalPrice, clearCart, navigate]);
+  }, [cart, getTotalPrice, clearCart, navigate, email]);
   
   return (
     <PageContainer>
