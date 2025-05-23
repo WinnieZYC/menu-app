@@ -48,7 +48,7 @@ const handler = async (req, res) => {
       port: 465,
       secure: true,
       auth: {
-        user: '265920579@qq.com', // QQ邮箱
+        user: '1069256197@qq.com', // 更新为正确的QQ邮箱
         pass: process.env.EMAIL_PASS // QQ邮箱授权码
       }
     });
@@ -62,7 +62,7 @@ const handler = async (req, res) => {
 
     // 发送邮件
     const result = await transporter.sendMail({
-      from: '"少女Elenaの菜单" <265920579@qq.com>',
+      from: '"少女Elenaの菜单" <1069256197@qq.com>',
       to: email,
       subject: '您的订单已确认 - 少女Elenaの菜单',
       html: `
